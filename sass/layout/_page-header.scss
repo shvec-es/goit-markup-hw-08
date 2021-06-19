@@ -20,30 +20,6 @@
 
 .site-nav {
   display: none;
-  // display: flex;
-
-  // &__item:not(:last-child) {
-  //   margin-right: 50px;
-  // }
-
-  // &__link {
-  //   padding-top: 32px;
-  //   padding-bottom: 32px;
-
-  //   color: var(--primary-text-color);
-  //   font-weight: 500;
-  //   font-size: 14px;
-  //   line-height: 1.14;
-  //   text-decoration: none;
-
-  //   transition: color var(--transition-functions);
-
-  //   &:hover,
-  //   &:focus {
-  //     color: var(--accent-color);
-  //     outline: none;
-  //   }
-  // }
 }
 
 .site-nav__link_current {
@@ -67,34 +43,78 @@
 
 .auth-nav {
   display: none;
-  // display: flex;
-  // margin-left: auto;
+}
 
-  // &__item + &__item {
-  //   margin-left: 50px;
-  // }
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
 
-  // &__link {
-  //   padding-top: 32px;
-  //   padding-bottom: 32px;
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
 
-  //   color: var(--text-color);
-  //   font-weight: 500;
-  //   font-size: 14px;
-  //   line-height: 1.14;
-  //   text-decoration: none;
+    &__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
 
-  //   transition: color var(--transition-functions);
+      color: var(--primary-text-color);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      text-decoration: none;
 
-  //   &:hover,
-  //   &:focus {
-  //     color: var(--accent-color);
-  //     outline: none;
-  //   }
-  // }
+      transition: color var(--transition-functions);
 
-  // &__icon {
-  //   margin-right: 10px;
-  //   fill: currentColor;
-  // }
+      &:hover,
+      &:focus {
+        color: var(--accent-color);
+        outline: none;
+      }
+    }
+  }
+
+  .auth-nav {
+    display: block;
+    margin-left: auto;
+
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &__link {
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      text-decoration: none;
+
+      transition: color var(--transition-functions);
+
+      &:hover,
+      &:focus {
+        color: var(--accent-color);
+        outline: none;
+      }
+    }
+
+    &__icon {
+      margin-right: 10px;
+      fill: currentColor;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .auth-nav {
+    display: flex;
+
+    &__item + &__item {
+      margin-left: 50px;
+    }
+
+    &__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
 }

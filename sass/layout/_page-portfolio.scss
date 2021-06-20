@@ -1,18 +1,13 @@
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-
-  &__item:not(:last-child) {
-    margin-right: 8px;
-  }
+  margin-bottom: 40px;
 
   &__button {
     padding: 6px 22px;
 
     color: var(--primary-text-color);
     background-color: var(--bg-decorations);
-    border-color: transparent;
+    border: none;
     border-radius: 4px;
     font-family: inherit;
     font-weight: 500;
@@ -44,6 +39,10 @@
 .examples-list {
   &__item {
     width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   &__link {
@@ -122,10 +121,29 @@
   .filter-list {
     flex-wrap: wrap;
     width: 362px;
+
+    &__item:nth-child(2) {
+      margin-left: 8px;
+      margin-right: 8px;
+      margin-bottom: 15px;
+    }
+
+    &__item:nth-child(4) {
+      margin-right: 8px;
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+    margin-bottom: 30px;
+
+    &__item:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
   .examples-list {
     display: flex;
     flex-wrap: wrap;
@@ -136,11 +154,24 @@
       flex-basis: calc((100% - 2 * 30px) / 2);
       margin-left: 30px;
       margin-top: 30px;
+
+      // &:first-child {
+
+      //   height: 440px;
+      // }
     }
+
+    // &__description:first-child {
+    //   height: 146px;
+    // }
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
+  }
+
   .examples-list {
     display: flex;
     flex-wrap: wrap;

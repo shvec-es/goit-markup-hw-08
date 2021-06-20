@@ -475,12 +475,12 @@ body {
 
 .hero {
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 480px;
   background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -490,14 +490,52 @@ body {
   margin-bottom: 30px;
   color: var(--white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 .hero__button_position {
   padding: 10px 32px;
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px), (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page/hero-mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page/hero-tablet.jpg);
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px), (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page/hero-tablet@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page/hero-desktop.jpg);
+  }
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/main-page/hero-desktop@2x.jpg);
+  }
 }
 
 .features__item {
@@ -849,6 +887,7 @@ body {
 @media screen and (min-width: 768px) {
   .contacts__join {
     display: flex;
+    align-items: baseline;
   }
   .footer__contacts {
     padding-left: 76px;
@@ -856,6 +895,9 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .footer {
+    text-align: start;
+  }
   .footer__container {
     display: flex;
     align-items: baseline;
@@ -914,7 +956,10 @@ body {
 
 @media screen and (min-width: 768px) {
   .subscribe-form__input {
+    display: block;
     width: 450px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
   }
 }
@@ -939,19 +984,14 @@ body {
 
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.filter-list__item:not(:last-child) {
-  margin-right: 8px;
+  margin-bottom: 40px;
 }
 
 .filter-list__button {
   padding: 6px 22px;
   color: var(--primary-text-color);
   background-color: var(--bg-decorations);
-  border-color: transparent;
+  border: none;
   border-radius: 4px;
   font-family: inherit;
   font-weight: 500;
@@ -977,6 +1017,10 @@ body {
 
 .examples-list__item {
   width: 100%;
+}
+
+.examples-list__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .examples-list__link {
@@ -1046,9 +1090,24 @@ body {
     flex-wrap: wrap;
     width: 362px;
   }
+  .filter-list__item:nth-child(2) {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+  .filter-list__item:nth-child(4) {
+    margin-right: 8px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .filter-list__item:not(:last-child) {
+    margin-right: 8px;
+  }
   .examples-list {
     display: flex;
     flex-wrap: wrap;
@@ -1063,6 +1122,9 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
+  }
   .examples-list {
     display: flex;
     flex-wrap: wrap;

@@ -100,6 +100,7 @@
 @media screen and (min-width: 768px) {
   .contacts__join {
     display: flex;
+    align-items: baseline;
   }
 
   .footer__contacts {
@@ -108,14 +109,18 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .footer__container {
-    display: flex;
-    align-items: baseline;
-  }
+  .footer {
+    text-align: start;
 
-  .footer__contacts {
-    padding-left: 0;
-    margin-right: 70px;
+    &__container {
+      display: flex;
+      align-items: baseline;
+    }
+
+    &__contacts {
+      padding-left: 0;
+      margin-right: 70px;
+    }
   }
 
   .address {

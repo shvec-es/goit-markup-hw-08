@@ -98,10 +98,6 @@
   display: flex;
   list-style: none;
 
-  &__item:not(:last-child) {
-    margin-right: 10px;
-  }
-
   &__link {
     font-weight: 500;
     font-size: 18px;

@@ -290,10 +290,6 @@ body {
   list-style: none;
 }
 
-.mobile-social-list__item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .mobile-social-list__link {
   font-weight: 500;
   font-size: 18px;
@@ -1220,12 +1216,12 @@ body {
   .filter-list__item:not(:last-child) {
     margin-bottom: 30px;
   }
-  .filter-list__item :nth-child(2) {
+  .filter-list__item:nth-child(2) {
     margin-left: 8px;
     margin-right: 8px;
     margin-bottom: 15px;
   }
-  .filter-list__item__item:nth-child(4) {
+  .filter-list__item:nth-child(4) {
     margin-right: 8px;
   }
 }

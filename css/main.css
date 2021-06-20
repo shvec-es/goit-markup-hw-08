@@ -1224,6 +1224,9 @@ body {
   .filter-list__item:nth-child(4) {
     margin-right: 8px;
   }
+  .examples-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
